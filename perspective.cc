@@ -32,20 +32,6 @@ void init(void)
    glShadeModel (GL_FLAT);
 }
 
-void transpose( int ndim, float *m )
-{
-// m is a pointer to a square matrix of dimension ndim 
-  int i, j;
-  float temp; 
-  for ( i=0; i<ndim; i++)
-	  for (j=i+1;j<ndim; j++)
-                  {
-                  temp = *(m+i*ndim+j);
-		  *(m+i*ndim+j)=*(m+j*ndim+i);
-                  *(m+j*ndim+i)=temp;
-                  }
-}
-
 
 void drawAxes(int length)
 {   

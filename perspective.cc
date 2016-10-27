@@ -19,10 +19,10 @@ typedef struct colortype {
 	float blue;
 } colortype;
 
-typedef struct house {
+typedef struct box {
 	vertex point[4];
 	colortype color;	
-} house;
+} box;
 
 
 
@@ -67,7 +67,7 @@ void drawAxes(int length)
 }
 
 
-void defineBox( house *face )
+void defineBox( box *face )
 {
 	face[0].point[0].x = -1.0;  // Bottom
     face[0].point[0].y = -1.0;
@@ -201,7 +201,7 @@ void defineBox( house *face )
 }
 
 
-void drawBox( struct house *face )
+void drawBox( struct box *face )
 {
 	int i, j;
 
@@ -258,9 +258,9 @@ void drawBox( struct house *face )
 void display(void)
 {
    const int DIMENSION=4;
-//   struct vertex house[7*4];  // 7 Sides, 4 Vertices per side  
+//   struct vertex box[7*4];  // 7 Sides, 4 Vertices per side  
 
-   struct house faces[6];
+   struct box faces[6];
    
    float *M;
    int i, j;

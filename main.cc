@@ -3,7 +3,7 @@
 
 #include "opengl.h"
 #include "structs.h"
-#include "protypes.h"
+#include "prototypes.h"
 #include "globals.h"
 #include "constants.h"
 

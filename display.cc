@@ -27,10 +27,13 @@ void display(void)
    glMatrixMode(GL_MODELVIEW);
    glLoadIdentity ();             /* clear the matrix */
 
-   //glTranslatef(0.0, 0.0, -10.0);
-   glFrustum(-1.0, 1.0, -1.0, 1.0, 0.0, 10.0);
+   // Let's manually move the camera back
+   
+//   glTranslatef(0.0, 0.0, -10.0);
 
-   //gluLookAt (6.0, 5.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0);
+   // Now explicitly place the camera
+   
+//   gluLookAt (6.0, 5.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0);
 
 
 /* DO NOT MODIFY ANYTHING ELSE */

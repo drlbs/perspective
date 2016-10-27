@@ -5,7 +5,7 @@
 CC = gcc
 LDLIBS =  -lglut -lGL -lGLU -lm
 HEADERS = opengl.h structs.h globals.h constants.h prototypes.h
-OBJS = init.o defineBox.o drawBox.o drawAxes.o reshape.o  
+OBJS = init.o defineBox.o drawBox.o drawAxes.o reshape.o display.o  
 
 debug ?= n
 ifeq ($(debug), y)
@@ -37,6 +37,9 @@ drawAxes.o : drawAxes.cc $(HEADERS)
 
 reshape.o : reshape.cc $(HEADERS)
 	$(CC) $(CFLAGS) reshape.cc -c
+
+display.o : display.cc $(HEADERS)
+	$(CC) $(CFLAGS) display.cc -c
 
 clean:
 	rm *.o

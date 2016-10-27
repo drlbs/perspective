@@ -10,8 +10,6 @@
 
 void display(void)
 {
-   const int DIMENSION=4;
-//   struct vertex box[7*4];  // 7 Sides, 4 Vertices per side  
 
    struct box faces[6];
    
@@ -29,10 +27,10 @@ void display(void)
    glMatrixMode(GL_MODELVIEW);
    glLoadIdentity ();             /* clear the matrix */
 
-   glTranslatef(0.0, 0.0, -10.0);
+   //glTranslatef(0.0, 0.0, -10.0);
    glFrustum(-1.0, 1.0, -1.0, 1.0, 0.0, 10.0);
 
-   gluLookAt (6.0, 5.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0);
+   //gluLookAt (6.0, 5.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0);
 
 
 /* DO NOT MODIFY ANYTHING ELSE */
@@ -43,11 +41,7 @@ void display(void)
    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
    drawAxes(5);
-
-
    drawBox(&faces[0]);
-
-
    glFlush();
 
 }

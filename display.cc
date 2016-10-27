@@ -29,7 +29,7 @@ void display(void)
 
    // Let's manually move the camera back
    
-//   glTranslatef(0.0, 0.0, -10.0);
+   //glTranslatef(0.0, 0.0, -10.0);
 
    // Now explicitly place the camera
    

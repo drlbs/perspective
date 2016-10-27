@@ -5,6 +5,8 @@
 #include "opengl.h"
 #include "structs.h"
 
+#include "prototypes.h"
+
 
 void display(void)
 {

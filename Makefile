@@ -20,26 +20,26 @@ all: perspective tags
 perspective :	main.o $(OBJS) 
 	$(CC) $(CFLAGS) main.o $(OBJS) -o perspective $(LDLIBS)
 
-main.o : main.cc $(HEADERS)
-	$(CC) $(CFLAGS) main.cc -c
+main.o : main.c $(HEADERS)
+	$(CC) $(CFLAGS) main.c -c
 
-init.o : init.cc $(HEADERS)
-	$(CC) $(CFLAGS) init.cc -c
+init.o : init.c $(HEADERS)
+	$(CC) $(CFLAGS) init.c -c
 
-defineBox.o : defineBox.cc $(HEADERS)
-	$(CC) $(CFLAGS) defineBox.cc -c
+defineBox.o : defineBox.c $(HEADERS)
+	$(CC) $(CFLAGS) defineBox.c -c
 
-drawBox.o : drawBox.cc $(HEADERS)
-	$(CC) $(CFLAGS) drawBox.cc -c
+drawBox.o : drawBox.c $(HEADERS)
+	$(CC) $(CFLAGS) drawBox.c -c
 
-drawAxes.o : drawAxes.cc $(HEADERS)
-	$(CC) $(CFLAGS) drawAxes.cc -c
+drawAxes.o : drawAxes.c $(HEADERS)
+	$(CC) $(CFLAGS) drawAxes.c -c
 
-reshape.o : reshape.cc $(HEADERS)
-	$(CC) $(CFLAGS) reshape.cc -c
+reshape.o : reshape.c $(HEADERS)
+	$(CC) $(CFLAGS) reshape.c -c
 
-display.o : display.cc $(HEADERS)
-	$(CC) $(CFLAGS) display.cc -c
+display.o : display.c $(HEADERS)
+	$(CC) $(CFLAGS) display.c -c
 
 clean:
 	rm *.o
@@ -49,4 +49,4 @@ pristine:
 	touch *
 
 tags:
-	ctags *.h *.cc
+	ctags *.h *.c
